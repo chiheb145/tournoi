@@ -1,0 +1,398 @@
+
+.logowanway{
+    float: left;
+    line-height: .8;
+    max-height: 33px;
+    width: auto;
+    margin-left: -0.2rem;
+    margin-right: .5rem;
+    margin-top: 5px;
+}
+.navbar-white {
+    background-color: #0d6b07;
+}
+.sidebar-dark-primary {
+    background-color: #0d6b07;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(248, 247, 255);
+    FONT-WEIGHT: bold;
+}
+
+.breadcrumb {
+    background-color: #1e7482 !important;
+}
+
+
+.titre {
+    color: white;
+    font-weight: bold;
+    padding-top: 5px;
+
+.stopwatch {
+    background-color: #ffffffe6;
+    border-radius: 5px;
+    box-shadow: 0 4px rgba(0, 0, 0, 0.75), 0 0 1px rgba(0, 0, 0, 0.15);
+    padding: 4px;
+
+&, & * {
+         transition: all 0.15s ease-out;
+     }
+
+.controls {
+    display: flex;
+
+}
+}
+
+
+
+
+}
+#msg_success{
+    width: 100%;
+    text-align: center;
+}
+.mx-1 {
+    margin-left:0px!important;
+    margin-right: 0px!important;
+}
+.navbar-expand .navbar-nav .nav-link {
+    padding-right: 0rem;
+    padding-left: 1rem;
+}
+.icon_div{
+    text-align: center;
+}
+.icon_div i{
+    margin-top: 2rem;
+    font-size: 30px;
+    color: green;
+}
+.stats_title {
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-align: center;
+    background-color: #b3d9ff;
+    border-radius: .25rem;
+}
+.required label:after {
+    color: #e32;
+    content: ' *';
+    display:inline;
+    font-weight: bold;
+}
+
+.password_div i{
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.pull-right {
+    float: right;
+}
+
+.new-category-input {
+    margin-bottom: 1rem;
+}
+
+
+
+.category-elment {
+    margin-top: 1rem;
+}
+
+.new-sheet-input {
+    margin-bottom: 1rem;
+}
+
+
+
+.sheet-element {
+    margin-top: 1rem;
+    margin-left: 6rem;
+}
+
+
+/*
+#calls_div select option[value="1"] {
+    background-color: #5cd65c;
+}
+
+#calls_div select option[value="2"] {
+    background-color: #ffff80;
+}
+
+#calls_div select option[value="2"] {
+    background-color: #ff3333;
+}*/
+
+
+.notification_button {
+    margin-left: 10px;
+}
+
+/*
+.required::after {
+    content: '*';
+    margin-left: 4px;
+    color: red;
+}*/
+
+.icon_div{
+    text-align: center;
+}
+.icon_div i{
+    margin-top: 2rem;
+    font-size: 30px;
+    color: green;
+}
+.first_td{
+    background-color: #e6e6e6;
+    text-align: center;
+}
+.second_td{
+    background-color: #bfbfbf;
+    text-align: center;
+}
+.third_td{
+    background-color: #b3ccff;
+    text-align: center;
+}
+
+.call_top_table {
+    border: 1px solid;
+}
+
+.operation_table{
+    text-align: center;
+}
+.operation_table th{
+    background-color: #c68c53;
+}
+.operation_table td{
+    background-color: #f2e5d9;
+}
+.operation_table tr:hover td{
+    background-color: #85582e;
+    font-weight: bold;
+}
+
+.qualifications_table{
+    text-align: center;
+}
+.qualifications_table th{
+    background-color: #5bd75b;
+}
+.qualifications_table td{
+    background-color: #d6f5d6;
+}
+
+.qualifications_table tr:hover td{
+    background-color: #28a428;
+    font-weight: bold;
+}
+
+.categories_stat_table{
+    text-align: center;
+}
+.categories_stat_table th{
+    background-color: #3399ff;
+}
+.categories_stat_table td{
+    background-color: #cce6ff;
+}
+.categories_stat_table td.tr-clickable-evaluation:hover{
+    background-color: #0069cc;
+    font-weight: bold;
+}
+.agent_stats_table{
+    text-align: center;
+}
+.agent_stats_table th{
+    background-color: #bf80ff;
+}
+.agent_stats_table td{
+    background-color: #e6ccff;
+}
+.agent_stats_table tr:hover td{
+    background-color: #9c33ff;
+    font-weight: bold;
+}
+.strict_stat_table{
+    text-align: center;
+}
+.strict_stat_table th{
+    background-color: #ff3333;
+}
+.strict_stat_table td{
+    background-color: #ffb3b3;
+}
+.strict_stat_table tr:hover td{
+    background-color: #e60000;
+    font-weight: bold;
+}
+
+
+
+.search_div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #4a677d ;
+    border-radius: 7px ;
+}
+
+#agent_stats_table_wrapper{
+    width: 100%;
+}
+
+.user_name {
+    margin-top: 10px;
+    color: #a4a9b2;
+}
+
+.stats_title {
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-align: center;
+    background-color: #b3d9ff;
+    border-radius: .25rem;
+}
+
+#acceuil_title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.select2-container .select2-selection--single {
+    height: 36px !important;
+}
+
+.label_under {
+    display: inline-block;
+    width: 6em;
+    text-align: center;
+}
+.label_under input {
+    border-radius: 0.25rem;
+}
+
+.tr-clickable{
+    cursor: pointer;
+}
+
+.table_break{
+    max-width: 300px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.sales_stats{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: #e6f5ff;
+    border-radius: 0.25rem;
+}
+.call_top_table {
+    height: 3rem;
+    font-weight: bold;
+}
+
+.breadcrumb {
+    background-color: #001c4e !important;
+}
+
+.titre {
+    color: white;
+    font-weight: bold;
+    padding-top: 5px;
+
+}
+
+#msg_success {
+    width: 100%;
+    text-align: center;
+}
+.presence-table .msg_success {
+    width: 100%;
+    text-align: center;
+    margin-bottom: .5rem !important;
+}
+
+.presence_today {
+    background-color: #b3d9ff
+}
+
+.new-skill-input {
+    margin-bottom: 1rem;
+}
+
+.skill-element {
+    margin-top: 1rem;
+    margin-left: 6rem;
+}
+
+.table_break2{
+    width: 50px;
+}
+
+#sales_table_wrapper{
+    width: 100%;
+}
+
+.navbar-expand .navbar-nav.top_left_nav_bar .dropdown-menu {
+    left: 0;
+}
+
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+    color: #09f;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: #09f;
+}
+
+
+
+.notify-alert {
+    z-index: 901 !important;
+}
+.navbar_color {
+    color: rgb(232, 227, 227)!important;
+    border-color: rgba(0,0,0,.1);
+}
+@media (max-width: 700px) {
+    .btn_responsive {
+        width: 97%;
+    }
+}
+
+.operation_link {
+    font-size: .75rem;
+}
+
+.select2-container--default {
+    width: 100% !important;
+}
+
+.select2-selection__choice {
+    color: black !important;
+}
+.sidebar-dark-primary .sidebar a {
+    color: #f8f7ff;
+    font-weight: bold;
+}
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #b3bcdb;
+    border-top: 2px solid #b3bcdb;
+    background-color: #b3bcdb;
+    color: #131313;
+
