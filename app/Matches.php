@@ -17,4 +17,12 @@ class Matches extends Model
         'created_at',
         'updated_at'
     ];
+    public function equipe_1()
+    {
+        return $this->hasone('App\Equipes', 'id','equipe_1')->first();
+    }
+    public function equipe_2()
+    {
+        return $this->hasOne('App\Equipes', 'id','equipe_2')->first();
+    }
 }

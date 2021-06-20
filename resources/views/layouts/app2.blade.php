@@ -192,47 +192,6 @@
                     data-accordion="false">
                     <!-- Add icons to the links using the .nav-icon class
                          with font-awesome or any other icon font library -->
-                    <li class="nav-item has-treeview ">
-                        <a href="#" class="nav-link">
-                            <i class="fas fa-football-ball"></i>
-                            <p>
-                                Gestion des Tournois
-                                <i class="fas fa-angle-left right"></i>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-
-
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Liste des matches</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Liste des équipes</p>
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>liste des joueurs </p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>liste des entraineurs </p>
-                                </a>
-                            </li>
-
-
-                        </ul>
-
-                    </li>
                     <li class="nav-item has-treeview">
                         <a href="#" class="nav-link">
                             <i class="fas fa-group"></i>
@@ -244,13 +203,47 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="{{route('tournois.index')}}" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p> Liste des tournois</p>
+                                    <p> Gestion des tournois</p>
                                 </a>
                             </li>
                         </ul>
                     </li>
+
+                    <li class="nav-item has-treeview ">
+                        <a href="#" class="nav-link">
+                            <i class="fas fa-football-ball"></i>
+                            <p>
+                                Gestion des équipes
+                                <i class="fas fa-angle-left right"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+
+                            <li class="nav-item">
+                                <a href="{{route('equipes.index')}}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Liste des équipes</p>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="{{route('joueurs.index')}}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>liste des joueurs </p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{route('antraineurs.index')}}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>liste des entraineurs </p>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </li>
+
                 </ul>
             </nav>
             <!-- /.sidebar-menu -->
