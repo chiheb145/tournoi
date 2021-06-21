@@ -9,10 +9,10 @@
     margin-top: 5px;
 }
 .navbar-white {
-    background-color: #0d6b07;
+    background-color: #b14e3c;
 }
 .sidebar-dark-primary {
-    background-color: #0d6b07;
+    background-color: #b14e3c;
 }
 .navbar-light .navbar-nav .nav-link {
     color: rgb(248, 247, 255);
@@ -20,7 +20,7 @@
 }
 
 .breadcrumb {
-    background-color: #1e7482 !important;
+    background-color: #23585a !important;
 }
 
 
@@ -391,8 +391,8 @@
 }
 .table thead th {
     vertical-align: bottom;
-    border-bottom: 2px solid #b3bcdb;
-    border-top: 2px solid #b3bcdb;
-    background-color: #b3bcdb;
+    border-bottom: 2px solid #f8f7ff;
+    border-top: 2px solid #f8f7ff;
+    background-color: #f8f7ff;
     color: #131313;
 
