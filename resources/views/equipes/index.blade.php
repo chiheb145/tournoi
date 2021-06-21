@@ -294,9 +294,9 @@
                 data: $('#form_update_equipe').serializeArray(),
                 dataType: 'json',
                 success: function (response) {
-                    $('#name_' + response.id).html(response.name);
-                    if(response.antraineur_id !=null){
-                        $('#antraineur_' + response.id).html(response.antraineur_id);
+                    $('#name_' + response['equipe'].id).html(response['equipe'].name);
+                    if(response['equipe'].antraineur_id !=null){
+                        $('#antraineur_' + response['equipe'].id).html(response['name_coach']);
                     }
                 },
             });

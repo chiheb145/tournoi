@@ -3,10 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Entraineurs extends Model
 {
     protected $table = 'entraineurs';
+    use SoftDeletes;
     protected $fillable = [
         'first_name',
         'last_name',
@@ -16,7 +18,8 @@ class Entraineurs extends Model
 
     protected $dates = [
         'created_at',
-        'updated_at'
+        'updated_at',
+        'deleted_at'
     ];
     public function full_name()
     {

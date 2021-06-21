@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Faker\Generator as Faker;
 
@@ -23,3 +24,23 @@ $factory->define(App\User::class, function (Faker $faker) {
         'remember_token' => Str::random(10),
     ];
 });
+
+
+    DB::table('tournois')->insert([
+
+        ['name' => 'champions league',
+            'date_debut' => '2021-08-01',
+            'date_fin' => '2021-08-10'
+        ],
+        ['name' => 'champions europe',
+            'date_debut' => '2021-08-10',
+            'date_fin' => '2021-08-15'
+        ],
+        ['name' => 'champions afrique',
+            'date_debut' => '2021-08-15',
+            'date_fin' => '2021-08-30'
+        ]
+
+    ]);
+
+

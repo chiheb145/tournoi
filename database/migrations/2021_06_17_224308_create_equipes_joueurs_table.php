@@ -15,7 +15,11 @@ class CreateEquipesJoueursTable extends Migration
     {
         Schema::create('equipes_joueurs', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('equipe_id');
+            $table->integer('joueur_id');
+            $table->integer('is_active')->default(1)->comment('1:affecté , 0:non affecté');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -12,6 +12,8 @@ class Tournois extends Model
 
     protected $fillable = [
         'name',
+        'date_debut',
+        'date_fin',
     ];
 
     protected $dates = [

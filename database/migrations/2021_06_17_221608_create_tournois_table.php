@@ -18,9 +18,8 @@ class CreateTournoisTable extends Migration
             $table->string('name');
             $table->date('date_debut');
             $table->date('date_fin');
-            $table->softDeletes();
             $table->timestamps();
-
+            $table->softDeletes();
         });
     }
 

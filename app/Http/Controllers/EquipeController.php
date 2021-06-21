@@ -72,6 +72,6 @@ class EquipeController extends Controller
 
         $equipe->save();
 
-        return Response()->json($equipe);
+        return Response()->json(['equipe'=>$equipe,'name_coach'=>$name_coach]);
     }
 }

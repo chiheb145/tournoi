@@ -32,10 +32,10 @@
 
             <div class="row pt-2">
                 <div class=" col bg-success">{{$matche->equipe_1()->name}}</div>
-                <div class=" col bg-warning">Antraineur : {{$matche->equipe_1()->entraineur()->full_name()}}</div>
+                <div class=" col bg-warning">Antraineur : @if($matche->equipe_1()->entraineur()) {{$matche->equipe_1()->entraineur()->full_name()}} @endif</div>
                 VS
                 <div class=" col bg-success">{{$matche->equipe_2()->name}}</div>
-                <div class="col bg-warning">Antraineur : {{$matche->equipe_2()->entraineur()->full_name()}}</div>
+                <div class="col bg-warning">Antraineur :@if($matche->equipe_2()->entraineur()) {{$matche->equipe_2()->entraineur()->full_name()}} @endif</div>
             </div>
         </div>
     @endforeach
@@ -69,10 +69,10 @@
 
                 <div class="row pt-2">
                     <div class=" col bg-success">{{$matche->equipe_1()->name}}</div>
-                    <div class=" col bg-warning">Antraineur : {{$matche->equipe_1()->entraineur()->full_name()}}</div>
+                    <div class=" col bg-warning">Antraineur : @if($matche->equipe_1()->entraineur()) {{$matche->equipe_1()->entraineur()->full_name()}} @endif</div>
                     VS
                     <div class=" col bg-success">{{$matche->equipe_2()->name}}</div>
-                    <div class="col bg-warning">Antraineur : {{$matche->equipe_2()->entraineur()->full_name()}}</div>
+                    <div class="col bg-warning">Antraineur : @if($matche->equipe_2()->entraineur()) {{$matche->equipe_2()->entraineur()->full_name()}} @endif</div>
                 </div>
             </div>
         @endforeach
