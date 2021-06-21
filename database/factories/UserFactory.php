@@ -26,21 +26,19 @@ $factory->define(App\User::class, function (Faker $faker) {
 });
 
 
-    DB::table('tournois')->insert([
-
-        ['name' => 'champions league',
+DB::table('tournois')->insert(array(
+    0 =>
+        array(
+            'name' => 'champions europe',
             'date_debut' => '2021-08-01',
-            'date_fin' => '2021-08-10'
-        ],
-        ['name' => 'champions europe',
-            'date_debut' => '2021-08-10',
             'date_fin' => '2021-08-15'
-        ],
-        ['name' => 'champions afrique',
+        ),
+    1 =>
+        array(
+            'name' => 'champions afrique',
             'date_debut' => '2021-08-15',
             'date_fin' => '2021-08-30'
-        ]
-
-    ]);
+        )
+));
 
 

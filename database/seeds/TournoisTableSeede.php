@@ -11,7 +11,7 @@ class TournoisTableSeede extends Seeder
      */
     public function run()
     {
-        factory(App\Tournois::class, 3)->create()->each(function ($p) {
+        factory(App\Tournois::class, 2)->create()->each(function ($p) {
             $p->save();
         });
     }
