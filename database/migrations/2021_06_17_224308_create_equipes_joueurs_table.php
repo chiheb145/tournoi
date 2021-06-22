@@ -17,7 +17,7 @@ class CreateEquipesJoueursTable extends Migration
             $table->increments('id');
             $table->integer('equipe_id');
             $table->integer('joueur_id');
-            $table->integer('is_active')->default(1)->comment('1:affecté , 0:non affecté');
+            $table->integer('is_active')->default(1);
             $table->timestamps();
             $table->softDeletes();
         });

@@ -11,7 +11,7 @@
                 </div>
                 <div class="inner fixed-inner ">
                     <div class="row">
-                        <div class="col-10"><strong>Date denut</strong></div>
+                        <div class="col-10"><strong>Date début</strong></div>
                         <div class="col-2"><span class="float-right"
                                                  id="creation_total">{{$tournois->first()->date_debut}}</span></div>
                     </div>
@@ -31,13 +31,14 @@
             </div>
 
             <div class="row pt-2">
-                <div class=" col bg-success">{{$matche->equipe_1()->name}}</div>
-                <div class=" col bg-warning">Antraineur : @if($matche->equipe_1()->entraineur()) {{$matche->equipe_1()->entraineur()->full_name()}} @endif</div>
+                <div class=" col bg-success">{{$matche->equipe_one()->name}}</div>
+                <div class=" col bg-warning">Antraineur : @if($matche->equipe_one()->entraineur()) {{$matche->equipe_one()->entraineur()->full_name()}} @endif</div>
                 VS
-                <div class=" col bg-success">{{$matche->equipe_2()->name}}</div>
-                <div class="col bg-warning">Antraineur :@if($matche->equipe_2()->entraineur()) {{$matche->equipe_2()->entraineur()->full_name()}} @endif</div>
+                <div class=" col bg-success">{{$matche->equipe_two()->name}}</div>
+                <div class="col bg-warning">Antraineur :@if($matche->equipe_two()->entraineur()) {{$matche->equipe_two()->entraineur()->full_name()}} @endif</div>
             </div>
         </div>
+        <br>
     @endforeach
     @elseif($from==2)
         <div class="row justify-content-center pt-2">
@@ -68,13 +69,16 @@
                 </div>
 
                 <div class="row pt-2">
-                    <div class=" col bg-success">{{$matche->equipe_1()->name}}</div>
-                    <div class=" col bg-warning">Antraineur : @if($matche->equipe_1()->entraineur()) {{$matche->equipe_1()->entraineur()->full_name()}} @endif</div>
+                    <div class=" col bg-success">{{$matche->equipe_one()->name}}</div>
+                    <div class=" col bg-warning">Antraineur : @if($matche->equipe_one()->entraineur()) {{$matche->equipe_one()->entraineur()->full_name()}} @endif</div>
                     VS
-                    <div class=" col bg-success">{{$matche->equipe_2()->name}}</div>
-                    <div class="col bg-warning">Antraineur : @if($matche->equipe_2()->entraineur()) {{$matche->equipe_2()->entraineur()->full_name()}} @endif</div>
+                    <div class=" col bg-success">{{$matche->equipe_two()->name}}</div>
+                    <div class="col bg-warning">Antraineur : @if($matche->equipe_two()->entraineur()) {{$matche->equipe_two()->entraineur()->full_name()}} @endif</div>
                 </div>
             </div>
+            <br>
         @endforeach
+    @elseif( $from=3)
+        <strong>Aucun tournoi enregistré</strong>
     @endif
 @endsection

@@ -27,4 +27,17 @@ class Equipes extends Model
     {
         return $this->belongsToMany('App\Joueurs', 'equipes_joueurs', 'equipe_id', 'joueur_id', 'id', 'id')->withPivot('id')->get();
     }
+    public function has_matche($date)
+    {
+        $has_matche = false;
+        $all_matches = Matches::where('date', $date)->get();
+        foreach ($all_matches as $matche) {
+            if ($matche->equipe_one == $this->id || $matche->equipe_two == $this->id) {
+                $has_matche = true;
+            }
+        }
+        return $has_matche;
+
+    }
+
 }

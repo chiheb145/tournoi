@@ -13,7 +13,7 @@
         </div>
 
         <div class="form-group">
-            <label for="equipe" class="col-sm-12  control-label col-form-label">Nom</label>
+            <label for="equipe" class="col-sm-12  control-label col-form-label">Prénom</label>
             <input type="text" class="form-control" name="last_name" value="{{$joueur->last_name}}" required>
         </div>
 

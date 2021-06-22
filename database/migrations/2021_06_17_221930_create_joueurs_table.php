@@ -16,7 +16,7 @@ class CreateJoueursTable extends Migration
         Schema::create('joueurs', function (Blueprint $table) {
             $table->increments('id');
             $table->string('first_name');
-            $table->increments('last_name');
+            $table->string('last_name');
             $table->integer('is_affected')->default(0);
             $table->timestamps();
             $table->softDeletes();

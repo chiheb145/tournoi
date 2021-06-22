@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class TournoisTableSeede extends Seeder
+class EquipesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,7 +11,7 @@ class TournoisTableSeede extends Seeder
      */
     public function run()
     {
-        factory(App\Tournois::class, 2)->create()->each(function ($p) {
+        factory(App\Equipes::class, 5)->create()->each(function ($p) {
             $p->save();
         });
     }

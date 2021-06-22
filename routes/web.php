@@ -17,6 +17,9 @@ Route::post('/tournoi/store', 'HomeController@store_tournoi')->name('tournoi.sto
 Route::post('/tournois/tournoi_delete', 'HomeController@delete_tournoi')->name('tournoi.delete');
 Route::post('/tournoi/edit', 'HomeController@edit_tournoi')->name('tournoi.edit');
 Route::post('/tournoi/update', 'HomeController@update_tournoi')->name('tournoi.update');
+Route::post('/tournois/ajouter_matche', 'HomeController@ajouter_matche')->name('tournois.ajouter_matche');
+Route::post('/store_matche', 'HomeController@store_matche')->name('matche.store');
+
 
 Route::get('/equipes', 'EquipeController@index')->name('equipes.index');
 Route::post('/equipe/store', 'EquipeController@store')->name('equipe.store');
@@ -34,6 +37,12 @@ Route::post('/store_attachement', 'JoueurController@store_attachement')->name('j
 
 
 Route::resource('antraineurs', 'AntraineurController');
+Route::post('/antraineur/edit', 'AntraineurController@edit_antraineur')->name('antraineur.edit_antraineur');
+Route::post('/antraineur/update', 'AntraineurController@update_antraineur')->name('antraineur.update');
+Route::post('/antraineurs/antraineur_delete', 'AntraineurController@delete_antraineur')->name('antraineur.delete');
+Route::post('/antraineurs/attacher_antraineur', 'AntraineurController@attacher_antraineur')->name('antraineur.attacher_antraineur');
+Route::post('/store_attachement_antraineur', 'AntraineurController@store_attachement')->name('antraineur.attacher');
+
 
 
 

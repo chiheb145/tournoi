@@ -58,10 +58,10 @@
                                 <table id="zero_config" class="table table-bordered ">
                                     <thead>
                                     <tr >
-                                        <th>#</th>
-                                        <th>Tournoi</th>
-                                        <th>Début </th>
-                                        <th>Fin </th>
+                                        <th >#</th>
+                                        <th >Tournoi</th>
+                                        <th >Début </th>
+                                        <th >Fin </th>
                                         <th >Action</th>
                                     </tr>
                                     </thead>
@@ -74,12 +74,15 @@
                                             <td id="date_debut_{{$tournoi->id}}">{{$tournoi->date_debut}}</td>
                                             <td id="date_fin_{{$tournoi->id}}">{{$tournoi->date_fin}}</td>
                                             <td >
-                                                <button class="btn btn-danger delete-tournoi" value="{{$tournoi->id}}"><i class="fas fa-trash" aria-hidden="true"></i>
+                                                <button class="btn btn-danger m-1 delete-tournoi" value="{{$tournoi->id}}"><i class="fas fa-trash" aria-hidden="true"></i>
                                                 </button>
-                                                <a class="btn btn-secondary fas fa-eye" href="{{route('tournoi.show',$tournoi->id)}}"></a>
-                                                <a class="btn btn-secondary m-2 editer_tournoi"
+                                                <a class="btn btn-secondary  m-1 fas fa-eye" href="{{route('tournoi.show',$tournoi->id)}}"> Afficher</a>
+                                                <a class="btn btn-secondary  m-1  editer_tournoi"
                                                    data_tournoi="{{$tournoi->id}}" href="#" title="Modifier"><i
                                                         class="fas fa-edit" style="color: white;font-size: 13px; width: 15px;"></i></a>
+                                                <a class="btn btn-secondary m-1 ajouter_matche"
+                                                   data_tournoi="{{$tournoi->id}}" href="#" title="Ajouter"><i
+                                                        class="fas fa-plus" style="color: white;font-size: 13px; width: 15px;"></i>Ajouter matche</a>
                                             </td>
 
                                         </tr>
@@ -94,6 +97,13 @@
                 </div>
             </div>
 
+        </div>
+        <div class="modal" id="modal_ajouter_matche" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content content_ajouter">
+
+                </div>
+            </div>
         </div>
         <div class="modal" id="modal_editer_tournoi" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
@@ -248,6 +258,7 @@
         });
         $('#btn-cancel2').click(function () {
             $('#tournoiDeleteModal').modal('hide');
+            $('#modal_ajouter_matche').hide();
         });
 
         $(document).on('click', '.editer_tournoi', function () {
@@ -274,6 +285,7 @@
         });
         $(document).on('click', '.close_btn', function () {
             $('#modal_editer_tournoi').hide();
+            $('#modal_ajouter_matche').hide();
         });
         $(document).on('click', '.post_editer', function (e) {
             e.preventDefault();
@@ -290,6 +302,28 @@
                     $('#date_fin_' + response.id).html(response.date_fin);
                 },
             });
+        });
+        $(document).on('click', '.ajouter_matche', function () {
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $('#modal_ajouter_matche').hide();
+            var formData = {
+                tournoi_id: $(this).attr('data_tournoi'),
+            };
+            $.ajax({
+                type: "POST",
+                url: "{{route('tournois.ajouter_matche')}}",
+                data: formData,
+                dataType: 'json',
+                success: function (response) {
+                    $('.content_ajouter').html(response.html);
+                    $('#modal_ajouter_matche').show();
+                }
+            });
+
         });
     </script>
 @endsection

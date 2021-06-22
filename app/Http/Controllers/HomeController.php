@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Equipes;
+use App\Matches;
 use App\Tournois;
 use Illuminate\Http\Request;
 
@@ -26,6 +28,9 @@ class HomeController extends Controller
     {
             $from=1;
             $tournois = Tournois::all();
+            if(!$tournois->first()){
+                $from=3;
+            }
             return view('home', compact('tournois','from'));
     }
     public function show($id){
@@ -76,5 +81,36 @@ class HomeController extends Controller
         $tournoi->date_fin = $request->date_fin;
         $tournoi->save();
         return response()->json($tournoi);
+    }
+    public function ajouter_matche(Request $request){
+         $tournoi=Tournois::find($request->tournoi_id);
+         $equipes=Equipes::all();
+
+        $html = view('tournois.ajouter_matche', compact('tournoi','equipes'))->render();
+
+        return response()->json(['html' => $html]);
+
+    }
+    public function store_matche(Request $request){
+
+         $equipe1=Equipes::find($request->equipe_one);
+         $equipe2=Equipes::find($request->equipe_two);
+        if($request->equipe_one==$request->equipe_two){
+            return back()->with(['error' => 'Veuillez choisir des équipes différentes svp !!!']);
+        }else{
+
+            if($equipe1->has_matche($request->date) == true || $equipe2->has_matche($request->date) == true ){
+                return back()->with(['error' => 'Veuillez choisir une autre date différente svp !!!']);
+            }
+            $matche=new Matches();
+            $matche->tournoi_id=$request->tournoi_id;
+            $matche->equipe_one=$request->equipe_one;
+            $matche->equipe_two=$request->equipe_two;
+            $matche->date=$request->date;
+            $matche->save();
+            return back()->with(['success' => 'Matche ajouté avec succès']);
+
+
+        }
     }
 }

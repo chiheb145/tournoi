@@ -1,7 +1,7 @@
-<form method="post" action="{{route('joueur.attacher')}}" class="form-horizontal" id="form_update_joueur">
+<form method="post" action="{{route('antraineur.attacher')}}" class="form-horizontal" id="form_update_antraineur">
     @csrf
     <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Attacher le joueur {{ $joueur->full_name() }} à un équipe</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Attacher l'antraineur {{ $antraineur->full_name() }} à un équipe</h5>
         <button type="button" class="close close_btn" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
@@ -13,12 +13,12 @@
             <select type="text" class="form-control" name="equipe_id"  required>
                 <option value="">Sélèctionner</option>
                 @foreach($equipes as $equipe)
-                    <option value="{{$equipe->id}}" @if($joueur->equipe() && $joueur->equipe()->id==$equipe->id) selected @endif>{{$equipe->name}}</option>
+                    <option value="{{$equipe->id}}" @if($antraineur->equipe() && $antraineur->equipe()->id==$equipe->id) selected @endif>{{$equipe->name}}</option>
                 @endforeach
             </select>
         </div>
 
-        <input type="hidden" name="joueur_id" value="{{$joueur->id}}">
+        <input type="hidden" name="antraineur_id" value="{{$antraineur->id}}">
     </div>
     <div class="modal-footer">
         <button type="submit" class="btn btn-primary">Modifier</button>

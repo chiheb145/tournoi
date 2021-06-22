@@ -26,4 +26,12 @@ class Entraineurs extends Model
         //dd($this->attributes['first_name']);
         return @$this->attributes['first_name'] . ' ' . @$this->attributes['last_name'];
     }
+    public function equipe(){
+
+        $equipe = Equipes::where('antraineur_id', $this->id)->first();
+        if (!$equipe ) {
+            $equipe = null;
+        }
+        return $equipe;
+    }
 }
